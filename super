@@ -1,0 +1,41 @@
+class Animal {
+String sound = "Animal Sound";
+void makeSound() {
+System.out.println(sound);
+}
+}
+class Dog extends Animal {
+String sound = "Bark";
+void makeSound() {
+super.makeSound(); // Using super keyword to call the superclass method
+System.out.println(sound);
+}
+}
+public class Main {
+public static void main(String[] args) {
+Dog myDog = new Dog();
+myDog.makeSound();
+}
+}
+Output:
+Animal Sound
+Bark
+class Animal {
+String sound = "Animal Sound";
+void makeSound() {
+System.out.println(sound);
+}
+}
+class Dog extends Animal {
+String dogSound = "Bark";
+void makeDogSound() {
+makeSound(); // Calling the superclass method directly without super keyword
+System.out.println(dogSound);
+}
+}
+public class Main {
+public static void main(String[] args) {
+Dog myDog = new Dog();
+myDog.makeDogSound();
+}
+}
